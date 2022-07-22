@@ -1,27 +1,63 @@
 package com.Quotka.Quotka_BackEnd.domain.board;
 
-import lombok.AllArgsConstructor;
+import com.Quotka.Quotka_BackEnd.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.apache.catalina.User;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Getter
-@Builder
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class playground {
+@Table(name = "playground")
+public class playground extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "play_id")
     private Long id;
 
-    @Column(length = 100)
+    @Column(length = 500, name = "play_title")
     private String title;
 
-    @Column(length = 4000)
+    @Column(name = "play_author")
+    private String author;
+
+    @Column(name = "play_regDate")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate regDate;
+
+    @Column(name = "play_count")
+    private int count;
+
+    @Lob
+    @Column(name = "play_content")
     private String content;
+
+    @Builder
+    public playground(String title, String author, LocalDate regDate, int count, String content) {
+        this.title = title;
+        this.author = author;
+        this.regDate = regDate;
+        this.count = count;
+        this.content = content;
+
+    }
+
+    public void update(String title, String author, LocalDate regDate, int count, String content) {
+        this.title = title;
+        this.author = author;
+        this.regDate = regDate;
+        this.count = count;
+        this.content = content;
+    }
+
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "userId")
+//    private User user;
 
 }

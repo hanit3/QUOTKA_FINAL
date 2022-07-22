@@ -1,4 +1,4 @@
-package com.Quotka.Quotka_BackEnd.controller;
+package com.Quotka.Quotka_BackEnd.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

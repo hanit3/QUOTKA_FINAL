@@ -1,41 +1,67 @@
 package com.Quotka.Quotka_BackEnd.domain.model.board;
 
+import com.Quotka.Quotka_BackEnd.domain.BaseTimeEntity;
+import com.Quotka.Quotka_BackEnd.domain.model.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.apache.catalina.User;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class quoteMaster {
+@Table(name = "quoteMaster")
+public class quoteMaster extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "quote_id")
     private Long id;
 
-    @Column(length = 100)
+    @Column(nullable = false, length = 500, name = "quote_title")
     private String title;
 
-    @Lob
+    @Column(nullable = false, length = 500, name = "quote_author")
+    private String author;
+
+    @ManyToOne(targetEntity = User.class) //Many = Board, User = One
+    @JoinColumn(name="userId")
+    private User user; //DB는 오브젝트를 저장할 수 없다. FK, 자바는 오브젝트를 저장할 수 있다.
+
+    @CreationTimestamp
+    private Timestamp createDate;
+
+    @ColumnDefault("0")
+    @Column(name = "quote_count")
+    private int count;
+
+    @Lob //대용량 데이터
+    @Column(name = "quote_content")
     private String content;
 
-//    private String author;
+    @Builder
+    public quoteMaster(String title, String author, Timestamp createDate, int count, String content) {
+        this.title = title;
+        this.author = author;
+        this.createDate = createDate;
+        this.count = count;
+        this.content = content;
 
-//    @Builder
-//    public playground(String title, String content, String author) {
-//        this.title = title;
-//        this.content = content;
-//        this.author = author;
-//    }
+    }
 
-//    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "userId")
-//    private User user;
+    public void quoteMasterUpdate(String title, String author, Timestamp createDate, int count, String content) {
+        this.title = title;
+        this.author = author;
+        this.createDate = createDate;
+        this.count = count;
+        this.content = content;
+    }
 
 }

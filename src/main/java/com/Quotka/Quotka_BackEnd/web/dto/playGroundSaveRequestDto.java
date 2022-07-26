@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.sql.Timestamp;
 
 
 @Getter
@@ -13,15 +13,15 @@ import java.time.LocalDate;
 public class playGroundSaveRequestDto {
     private String title;
     private String author;
-    private LocalDate regDate;
+    private Timestamp createDate;
     private int count;
     private String content;
 
     @Builder
-    public playGroundSaveRequestDto(String title, String author, LocalDate regDate, int count, String content) {
+    public playGroundSaveRequestDto(String title, String author, Timestamp createDate, int count, String content) {
         this.title = title;
         this.author = author;
-        this.regDate = regDate;
+        this.createDate = createDate;
         this.count = count;
         this.content = content;
     }
@@ -30,7 +30,7 @@ public class playGroundSaveRequestDto {
         return playground.builder()
                 .title(title)
                 .author(author)
-                .regDate(regDate)
+                .createDate(createDate)
                 .count(count)
                 .content(content)
                 .build();

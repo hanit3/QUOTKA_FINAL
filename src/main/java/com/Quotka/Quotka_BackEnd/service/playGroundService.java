@@ -18,19 +18,20 @@ public class playGroundService {
     private final playGroundRepo playGroundRepo;
 
     @Transactional
-    public Long save(playGroundSaveRequestDto playGroundRequestDto) {
+    public Long save(playGroundSaveRequestDto playGroundSaveRequestDto) {
 //        playGroundSaveRequestDto.setUser(user);
-        return playGroundRepo.save(playGroundRequestDto.toEntity()).getId();
+        return playGroundRepo.save(playGroundSaveRequestDto.toEntity()).getId();
     }
 
     @Transactional
-    public Long update(Long id, playGroundUpdateRequestDto playGroundRequestDto) {
+    public Long update(Long id, playGroundUpdateRequestDto playGroundUpdateRequestDto) {
         playground playground = playGroundRepo.findById(id)
                 .orElseThrow(() -> new
                 IllegalArgumentException("해당 게시글이 없습니다. id="+ id));
 
-        playground.update(playGroundRequestDto.getTitle(), playGroundRequestDto.getAuthor(),
-                playGroundRequestDto.getRegDate(), playGroundRequestDto.getCount(),  playGroundRequestDto.getContent());
+        playground.playGroundUpdate(playGroundUpdateRequestDto.getTitle(), playGroundUpdateRequestDto.getAuthor(),
+                playGroundUpdateRequestDto.getCreateDate(), playGroundUpdateRequestDto.getCount(),
+                playGroundUpdateRequestDto.getContent());
 
         return id;
     }
@@ -43,8 +44,5 @@ public class playGroundService {
         return new playGroundResponseDto(entity);
     }
 
-    public List<playground> findAll() {
-        return playGroundRepo.findAll();
-    }
 
 }

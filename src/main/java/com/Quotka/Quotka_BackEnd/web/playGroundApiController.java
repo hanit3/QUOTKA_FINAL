@@ -19,8 +19,8 @@ public class playGroundApiController {
     }
 
     @PutMapping("/api/v1/playGround/{id}")
-    public Long update(@PathVariable Long id, @RequestBody playGroundUpdateRequestDto playGroundRequestDto) {
-        return playGroundService.update(id, playGroundRequestDto);
+    public Long update(@PathVariable Long id, @RequestBody playGroundUpdateRequestDto playGroundUpdateRequestDto) {
+        return playGroundService.update(id, playGroundUpdateRequestDto);
     }
 
     @GetMapping("/api/v1/playGround/{id}")

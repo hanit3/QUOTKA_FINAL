@@ -5,11 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
-import java.time.LocalDate;
 
 @Getter
 @NoArgsConstructor
-public class playGroundUpdateRequestDto {
+public class quoteMasterUpdateRequestDto {
     private Long id;
     private String title;
     private String author;
@@ -18,7 +17,7 @@ public class playGroundUpdateRequestDto {
     private String content;
 
     @Builder
-    public playGroundUpdateRequestDto(String title, String author, Timestamp createDate, int count, String content) {
+    public quoteMasterUpdateRequestDto(String title, String author, Timestamp createDate, int count, String content) {
         this.title = title;
         this.author = author;
         this.createDate = createDate;

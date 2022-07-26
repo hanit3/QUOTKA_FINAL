@@ -1,6 +1,6 @@
 package com.Quotka.Quotka_BackEnd.web.dto;
 
-import com.Quotka.Quotka_BackEnd.domain.board.playground;
+import com.Quotka.Quotka_BackEnd.domain.model.board.playground;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,4 +36,6 @@ public class playGroundSaveRequestDto {
                 .build();
 
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.Quotka.Quotka_BackEnd.domain.user;
+package com.Quotka.Quotka_BackEnd.domain.model.user;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

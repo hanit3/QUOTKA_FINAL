@@ -1,6 +1,6 @@
 package com.Quotka.Quotka_BackEnd.web.dto;
 
-import com.Quotka.Quotka_BackEnd.domain.board.playground;
+import com.Quotka.Quotka_BackEnd.domain.model.board.playground;
 import lombok.Getter;
 
 import java.time.LocalDate;

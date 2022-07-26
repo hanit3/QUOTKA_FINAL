@@ -1,18 +1,23 @@
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/Quotka?serverTimezone=Asia/Seoul
+    url: jdbc:mariadb://localhost:3306/quotkadb?serverTimezone=Asia/Seoul
     username: root
     password: sarah1106
 
-    jpa:
-      open-in-view: true
-      hibernate:
-        ddl-auto: create
-        use-new-id-generate-mappings: false
-      show-sql: true
-      properties:
-        hibernate.format_sql: true
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create #테이블을 새로 만들겠다는 의미임.
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        #이름 그대로 테이블 만들겠다는 의미임.
+      use-new-id-generate-mappings: false
+      #jpa가 사용하는 넘버링 전략을 사용하지 않겠다. (false)
+      #MySQL에서 사용할 auto increment 사용할 거임.
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
 
     thymeleaf:
       cache: false

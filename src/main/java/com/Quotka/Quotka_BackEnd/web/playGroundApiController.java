@@ -14,8 +14,8 @@ public class playGroundApiController {
     private final playGroundService playGroundService;
 
     @PostMapping("/api/v1/playGround")
-    public Long save(@RequestBody playGroundSaveRequestDto playGroundRequestDto) {
-        return playGroundService.save(playGroundRequestDto);
+    public Long save(@RequestBody playGroundSaveRequestDto playGroundSaveRequestDto) {
+        return playGroundService.save(playGroundSaveRequestDto);
     }
 
     @PutMapping("/api/v1/playGround/{id}")

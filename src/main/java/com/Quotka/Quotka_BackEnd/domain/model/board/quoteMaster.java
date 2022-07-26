@@ -1,4 +1,4 @@
-package com.Quotka.Quotka_BackEnd.domain.board;
+package com.Quotka.Quotka_BackEnd.domain.model.board;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

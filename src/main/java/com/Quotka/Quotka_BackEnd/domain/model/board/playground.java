@@ -1,6 +1,7 @@
-package com.Quotka.Quotka_BackEnd.domain.board;
+package com.Quotka.Quotka_BackEnd.domain.model.board;
 
 import com.Quotka.Quotka_BackEnd.domain.BaseTimeEntity;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.time.LocalDate;
 
+@Builder
 @Getter
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "playground")
@@ -21,10 +24,10 @@ public class playground extends BaseTimeEntity {
     @Column(name = "play_id")
     private Long id;
 
-    @Column(length = 500, name = "play_title")
+    @Column(nullable = false, length = 500, name = "play_title")
     private String title;
 
-    @Column(name = "play_author")
+    @Column(nullable = false, length = 500, name = "play_author")
     private String author;
 
     @Column(name = "play_regDate")

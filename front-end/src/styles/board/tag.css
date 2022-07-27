@@ -1,0 +1,7 @@
+.rti--container {
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  width: 256px;
+  border: 1px solid gray;
+}

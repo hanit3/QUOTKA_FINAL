@@ -1,4 +1,4 @@
-package com.Quotka.Quotka_BackEnd.service;
+package com.Quotka.Quotka_BackEnd.web.service;
 
 import com.Quotka.Quotka_BackEnd.domain.model.board.playGroundRepo;
 import com.Quotka.Quotka_BackEnd.domain.model.board.playground;
@@ -19,12 +19,19 @@ public class quoteMasterService {
     @Autowired
     private quoteMasterRepo quoteMasterRepo;
 
-    @Transactional
-    public Long save(quoteMasterSaveRequestDto quoteMasterRequestDto) {
-//        playGroundSaveRequestDto.setUser(user);
-        return quoteMasterRepo.save(quoteMasterRequestDto.toEntity()).getId();
+//    @Transactional
+//    public Long save(quoteMasterSaveRequestDto quoteMasterRequestDto) {
+////        playGroundSaveRequestDto.setUser(user);
+//        return quoteMasterRepo.save(quoteMasterRequestDto.toEntity()).getId();
+//    }
+
+    public List<quoteMaster> quoteMasterList() {
+        return quoteMasterRepo.findAll();
     }
 
+    public void save(quoteMaster quoteMaster) {
+        quoteMasterRepo.save(quoteMaster);
+    }
     @Transactional
     public Long update(Long id, quoteMasterUpdateRequestDto quoteMasterUpdateRequestDto) {
         quoteMaster quoteMaster = quoteMasterRepo.findById(id)
@@ -44,10 +51,5 @@ public class quoteMasterService {
 
         return new quoteMasterResponseDto(entity);
     }
-
-    public List<quoteMaster> quoteMasterList() {
-        return quoteMasterRepo.findAll();
-    }
-
 
 }

@@ -1,4 +1,4 @@
-package com.Quotka.Quotka_BackEnd.service;
+package com.Quotka.Quotka_BackEnd.web.service;
 
 import com.Quotka.Quotka_BackEnd.domain.model.board.playGroundRepo;
 import com.Quotka.Quotka_BackEnd.domain.model.board.playground;
@@ -48,5 +48,6 @@ public class playGroundService {
     public List<playground> playgroundList() {
         return playGroundRepo.findAll();
     }
+
 
 }

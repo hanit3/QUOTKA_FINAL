@@ -24,10 +24,10 @@ public class playground extends BaseTimeEntity {
     @Column(name = "play_id")
     private Long id;
 
-    @Column(nullable = false, length = 500, name = "play_title")
+    @Column(length = 500, name = "play_title")
     private String title;
 
-    @Column(nullable = false, length = 500, name = "play_author")
+    @Column(length = 500, name = "play_author")
     private String author;
 
     @ManyToOne(fetch = FetchType.EAGER, targetEntity = User.class) //Many = Board, User = One

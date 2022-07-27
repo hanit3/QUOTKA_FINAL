@@ -1,21 +1,28 @@
 package com.Quotka.Quotka_BackEnd.web;
 
-import com.Quotka.Quotka_BackEnd.service.playGroundService;
-import com.Quotka.Quotka_BackEnd.service.quoteMasterService;
+import com.Quotka.Quotka_BackEnd.web.service.quoteMasterService;
 import com.Quotka.Quotka_BackEnd.web.dto.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
 public class quoteMasterApiController {
 
-    private final quoteMasterService quoteMasterService;
+    @Autowired
+    private quoteMasterService quoteMasterService;
 
-    @PostMapping("/api/v1/quoteMaster")
-    public Long save(@RequestBody quoteMasterSaveRequestDto quoteMasterSaveRequestDto) {
-        return quoteMasterService.save(quoteMasterSaveRequestDto);
-    }
+//    @PostMapping("/quoteMasterForm")
+//    public Long save(@RequestBody quoteMasterSaveRequestDto quoteMasterSaveRequestDto) {
+//        return quoteMasterService.save(quoteMasterSaveRequestDto);
+//    }
+
+//    @PostMapping("/quoteMasterForm")
+//    public String quoteMasterFormSubmit(quoteMasterSaveRequestDto quoteMasterRequestDto){
+//        quoteMasterService.save(quoteMasterRequestDto);
+//        return "redirect:/board/quoteMaster";
+//    }
 
     @PutMapping("/api/v1/quoteMaster/{id}")
     public Long update(@PathVariable Long id, @RequestBody quoteMasterUpdateRequestDto quoteMasterUpdateRequestDto) {

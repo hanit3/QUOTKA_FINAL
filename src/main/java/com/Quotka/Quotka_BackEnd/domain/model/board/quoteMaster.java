@@ -28,7 +28,7 @@ public class quoteMaster extends BaseTimeEntity {
     @Column(nullable = false, length = 500, name = "quote_title")
     private String title;
 
-    @Column(nullable = false, length = 500, name = "quote_author")
+    @Column(length = 500, name = "quote_author")
     private String author;
 
     @ManyToOne(targetEntity = User.class) //Many = Board, User = One
@@ -40,7 +40,7 @@ public class quoteMaster extends BaseTimeEntity {
     private int count;
 
     @Lob //대용량 데이터
-    @Column(name = "quote_content")
+    @Column(nullable = false, name = "quote_content")
     private String content;
 
     @Builder

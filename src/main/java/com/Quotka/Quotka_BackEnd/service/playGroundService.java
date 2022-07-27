@@ -6,6 +6,7 @@ import com.Quotka.Quotka_BackEnd.web.dto.playGroundResponseDto;
 import com.Quotka.Quotka_BackEnd.web.dto.playGroundSaveRequestDto;
 import com.Quotka.Quotka_BackEnd.web.dto.playGroundUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +16,8 @@ import java.util.List;
 @Service
 public class playGroundService {
 
-    private final playGroundRepo playGroundRepo;
+    @Autowired
+    private playGroundRepo playGroundRepo;
 
     @Transactional
     public Long save(playGroundSaveRequestDto playGroundSaveRequestDto) {
@@ -43,5 +45,8 @@ public class playGroundService {
         return new playGroundResponseDto(entity);
     }
 
+    public List<playground> playgroundList() {
+        return playGroundRepo.findAll();
+    }
 
 }

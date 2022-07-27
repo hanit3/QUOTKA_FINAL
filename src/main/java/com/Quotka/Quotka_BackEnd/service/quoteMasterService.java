@@ -6,6 +6,7 @@ import com.Quotka.Quotka_BackEnd.domain.model.board.quoteMaster;
 import com.Quotka.Quotka_BackEnd.domain.model.board.quoteMasterRepo;
 import com.Quotka.Quotka_BackEnd.web.dto.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +16,8 @@ import java.util.List;
 @Service
 public class quoteMasterService {
 
-    private final quoteMasterRepo quoteMasterRepo;
+    @Autowired
+    private quoteMasterRepo quoteMasterRepo;
 
     @Transactional
     public Long save(quoteMasterSaveRequestDto quoteMasterRequestDto) {
@@ -41,6 +43,10 @@ public class quoteMasterService {
                         IllegalArgumentException("해당 게시글이 없습니다. id=\"+ id"));
 
         return new quoteMasterResponseDto(entity);
+    }
+
+    public List<quoteMaster> quoteMasterList() {
+        return quoteMasterRepo.findAll();
     }
 
 

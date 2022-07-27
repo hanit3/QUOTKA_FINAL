@@ -5,6 +5,7 @@ import com.Quotka.Quotka_BackEnd.domain.model.board.playground;
 import com.Quotka.Quotka_BackEnd.domain.model.board.quoteMaster;
 import com.Quotka.Quotka_BackEnd.domain.model.board.quoteMasterRepo;
 import com.Quotka.Quotka_BackEnd.service.playGroundService;
+import com.Quotka.Quotka_BackEnd.service.quoteMasterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,23 +21,23 @@ import java.util.List;
 public class BoardController {
 
     @Autowired
-    private quoteMasterRepo quoteMasterRepo;
+    private quoteMasterService quoteMasterService;
 
     @GetMapping("/quoteMaster")
     public String quoteMaster(Model model) {
-        List<quoteMaster> quoteMasterList = quoteMasterRepo.findAll();
-        model.addAttribute("quoteMaster", quoteMasterList);
+
+        model.addAttribute("quoteMaster", quoteMasterService.quoteMasterList());
 
         return "board/quoteMaster";
     }
 
     @Autowired
-    private playGroundRepo playGroundRepo;
+    private playGroundService playGroundService;
 
     @GetMapping("/playGround")
     public String play(Model model) {
-        List<playground> playgroundList = playGroundRepo.findAll();
-        model.addAttribute("playground", playgroundList);
+
+        model.addAttribute("playground", playGroundService.playgroundList());
 
         return "board/playGround";
     }

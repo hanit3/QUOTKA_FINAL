@@ -8,7 +8,7 @@ spring:
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: create #테이블을 새로 만들겠다는 의미임.
+      ddl-auto: update #create : 테이블을 새로 만들겠다는 의미임.
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         #이름 그대로 테이블 만들겠다는 의미임.

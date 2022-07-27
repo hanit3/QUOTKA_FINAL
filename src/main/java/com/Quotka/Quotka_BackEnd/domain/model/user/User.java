@@ -22,7 +22,7 @@ public class User extends BaseTimeEntity {
     @Id //Primary Key
     @GeneratedValue(strategy = GenerationType.IDENTITY) //프로젝트에 연결된 DB의 넘버링 전략을 따라간다.
     // 굳이 nullable 하지 않아도 자동 입력 됨.
-    private Long id; //sequence, auto_increment
+    private Long userId; //sequence, auto_increment
 
     @Column(nullable = false, length = 30)
     private String nickname;

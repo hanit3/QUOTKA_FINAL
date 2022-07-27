@@ -3,10 +3,7 @@ package com.Quotka.Quotka_BackEnd.domain.model.board;
 import com.Quotka.Quotka_BackEnd.domain.BaseTimeEntity;
 import com.Quotka.Quotka_BackEnd.domain.model.reply.playGroundReply;
 import com.Quotka.Quotka_BackEnd.domain.model.user.User;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import org.hibernate.annotations.ColumnDefault;
 
@@ -15,6 +12,7 @@ import java.util.List;
 
 @Builder
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

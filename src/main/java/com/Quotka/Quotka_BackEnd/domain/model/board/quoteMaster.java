@@ -35,9 +35,6 @@ public class quoteMaster extends BaseTimeEntity {
     @JoinColumn(name="userId")
     private User user; //DB는 오브젝트를 저장할 수 없다. FK, 자바는 오브젝트를 저장할 수 있다.
 
-    @CreationTimestamp
-    private Timestamp createDate;
-
     @ColumnDefault("0")
     @Column(name = "quote_count")
     private int count;
@@ -47,19 +44,17 @@ public class quoteMaster extends BaseTimeEntity {
     private String content;
 
     @Builder
-    public quoteMaster(String title, String author, Timestamp createDate, int count, String content) {
+    public quoteMaster(String title, String author, int count, String content) {
         this.title = title;
         this.author = author;
-        this.createDate = createDate;
         this.count = count;
         this.content = content;
 
     }
 
-    public void quoteMasterUpdate(String title, String author, Timestamp createDate, int count, String content) {
+    public void quoteMasterUpdate(String title, String author, int count, String content) {
         this.title = title;
         this.author = author;
-        this.createDate = createDate;
         this.count = count;
         this.content = content;
     }

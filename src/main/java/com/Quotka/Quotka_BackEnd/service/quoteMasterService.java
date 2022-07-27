@@ -30,7 +30,7 @@ public class quoteMasterService {
                         IllegalArgumentException("해당 게시글이 없습니다. id="+ id));
 
         quoteMaster.quoteMasterUpdate(quoteMasterUpdateRequestDto.getTitle(), quoteMasterUpdateRequestDto.getAuthor(),
-                quoteMasterUpdateRequestDto.getCreateDate(), quoteMasterUpdateRequestDto.getCount(),  quoteMasterUpdateRequestDto.getContent());
+                quoteMasterUpdateRequestDto.getCount(),  quoteMasterUpdateRequestDto.getContent());
 
         return id;
     }

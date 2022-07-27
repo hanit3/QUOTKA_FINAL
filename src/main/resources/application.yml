@@ -19,8 +19,30 @@ spring:
     properties:
       hibernate.format_sql: true
 
+  profiles:
+    include: oauth
+
     thymeleaf:
       cache: false
 
       main:
         allow-bean-definition-overriding: true
+
+
+    servlet:
+      multipart:
+        enabled: 'true'
+        max-request-size: 30MB
+        max-file-size: 10MB
+        location: C:\upload
+    server:
+      port: '8082'
+    logging:
+      level:
+        org:
+          springframework:
+            security:
+              web: debug
+        com:
+          quotka:
+            security: debug

@@ -30,8 +30,7 @@ public class playGroundService {
                 IllegalArgumentException("해당 게시글이 없습니다. id="+ id));
 
         playground.playGroundUpdate(playGroundUpdateRequestDto.getTitle(), playGroundUpdateRequestDto.getAuthor(),
-                playGroundUpdateRequestDto.getCreateDate(), playGroundUpdateRequestDto.getCount(),
-                playGroundUpdateRequestDto.getContent());
+                playGroundUpdateRequestDto.getCount(), playGroundUpdateRequestDto.getContent());
 
         return id;
     }

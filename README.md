@@ -2,6 +2,7 @@
 대학생 연합 IT 동아리 잇타(IT's TIME) 1기 프로젝트 팀 <W's COOL> <br>
 
 <br><br>
+<div align="center">
 
 ## 팀원
 ⭐️ 기획: 서희원 <br>
@@ -75,4 +76,4 @@ QUOTKA는 명언과 행복한 말을 나누자는 아이디어에서 시작되�
 - 회원정보 수정<br>
 <img width="1425" alt="회원정보 변경" src="https://github.com/user-attachments/assets/81c1f373-9e85-4b8f-83e3-65de74cd43ab"><br>
 
-
+</div>

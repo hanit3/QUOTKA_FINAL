@@ -1,8 +1,9 @@
+<div align="center">
+  
 # 사람들에게 위로와 공감을 얻는 웹사이트, QUOTKA
 대학생 연합 IT 동아리 잇타(IT's TIME) 1기 프로젝트 팀 <W's COOL> <br>
 
 <br><br>
-<div align="center">
 
 ## 팀원
 ⭐️ 기획: 서희원 <br>

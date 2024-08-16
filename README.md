@@ -36,6 +36,42 @@ QUOTKA는 사람들이 웹 사이트에 접속했을 때 따뜻함과 위로를 
 
 <br><br>
 ## 주요 기능 및 페이지
-- 메인 화면
-- "쿼드마스터" 게시판 글 목록 및 조회, 게시글 작성
-- 마이페이지
+<h3>메인 페이지</h3>
+- 사이트 메인 페이지<br>
+<img width="1423" alt="메인페이지" src="https://github.com/user-attachments/assets/f6edf767-52ac-4f35-9177-b4ee0bee7ee5"><br>
+<br>
+- 실시간 트렌드 게시글 확인<br>
+<img width="1406" alt="트렌딩" src="https://github.com/user-attachments/assets/576d8e48-18bb-4b8c-8687-833715770ddc"><br>
+
+<br>
+<h3>로그인/회원가입</h3>
+- 로그인<br>
+<img width="1426" alt="로그인" src="https://github.com/user-attachments/assets/e5c350b3-04cf-480e-8124-79d7a448c441"><br>
+<br>
+- 회원가입<br>
+  <img width="1417" alt="회원가입" src="https://github.com/user-attachments/assets/a5836b0c-4d6e-4cfa-85de-7985294baa8a"><br>
+
+<br>
+<h3>"쿼트마스터" 게시판</h3>
+- 게시글 목록<br>
+<img width="1429" alt="게시판" src="https://github.com/user-attachments/assets/d0c28c18-2148-416f-b001-4dc4358a8ed0"><br>
+<br>
+- 게시글 조회<br>
+<img width="1419" alt="게시글 조회" src="https://github.com/user-attachments/assets/0a4c3021-9fa5-4815-b043-a66df05e170b"><br>
+<br>
+- 좋아요, 스크랩, 댓글 작성 가능<br>
+<img width="1418" alt="좋아요 스크랩 댓글" src="https://github.com/user-attachments/assets/a9715120-e863-4bb0-8ce4-1e835dcb1077"><br>
+<br>
+- 게시글 작성<br>
+<img width="1423" alt="게시글 작성" src="https://github.com/user-attachments/assets/371c80a2-4e95-4607-b359-365fa8e40417"><br>
+
+<br>
+<h3>마이페이지</h3>
+- 작성했던 게시글, 스크랩 목록 등 히스토리 확인<br>
+<img width="1421" alt="마이페이지" src="https://github.com/user-attachments/assets/13fd8a02-f21b-45bb-9d4f-62f040b02169"><br>
+<img width="1425" alt="히스토리" src="https://github.com/user-attachments/assets/17b56bf0-5604-42f8-9f7f-fdc3f547179a"><br>
+<br>
+- 회원정보 수정<br>
+<img width="1425" alt="회원정보 변경" src="https://github.com/user-attachments/assets/81c1f373-9e85-4b8f-83e3-65de74cd43ab"><br>
+
+
